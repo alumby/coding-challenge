@@ -8,7 +8,7 @@ const myQuestions = [{
             a: "1997",
             b: "2013"
         },
-        correctAnswer: "a"
+        nyAnswer: "a"
     },
     {
         question: "What caused the root of all of the chaos?",
@@ -16,7 +16,7 @@ const myQuestions = [{
             a: "An Earthquake",
             b: "World War III"
         },
-        correctAnswer: "b"
+        nyAnswer: "b"
     },
     {
         question: "The president tries to stop an invasion from where?",
@@ -24,7 +24,7 @@ const myQuestions = [{
             a: "Cuba",
             b: "Soviet Union"
         },
-        correctAnswer: "b"
+        nyAnswer: "b"
     },
     {
         question: "Where was an island converted into a prison?",
@@ -32,7 +32,7 @@ const myQuestions = [{
             a: "LA",
             b: "Manhattan"
         },
-        correctAnswer: "b"
+        nyAnswer: "b"
     },
     {
         question: "Warning.. SPOILER ALERT: At the end of the movie, the main character Snake, does what?",
@@ -40,7 +40,7 @@ const myQuestions = [{
             a: "Puffs a cigarette while going into the darkness",
             b: "Picks a cigarette box labelled 'American Spirit'"
         },
-        correctAnswer: "a"
+        nyAnswer: "a"
     }
 ];
 function startQuiz() {
@@ -83,7 +83,7 @@ function showResults() {
         const answerContainer = answerContainers[questionNumber];
         const selector = 'input[name=question' + questionNumber + ']:checked';
         const userAnswer = (answerContainer.querySelector(selector) || {}).value;
-        if (userAnswer === currentQuestion.correctAnswer) {
+        if (userAnswer === currentQuestion.nyAnswer) {
             numNY++;
         }
         else {
